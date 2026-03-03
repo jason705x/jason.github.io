@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无犯罪证明验证结果</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .content {
+            padding: 25px 20px;
+            position: relative;
+        }
+
+        /* 右侧的“有效”印章样式 */
+        .stamp {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #d1e7dd;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #198754;
+            font-size: 24px;
+            font-weight: bold;
+            transform: rotate(-15deg);
+            box-shadow: 0 0 10px rgba(25, 135, 84, 0.2);
+            opacity: 0.8;
+            user-select: none;
+        }
+
+        .stamp::before {
+            content: "★★★★★";
+            font-size: 14px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .stamp::after {
+            content: "★★★★★";
+            font-size: 14px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 18px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .info-label {
+            min-width: 90px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .info-value {
+            flex: 1;
+            color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #f0f0f0;
+            margin: 15px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .scan-info {
+            color: #0d6efd;
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>无犯罪证明验证结果</h1>
+            <p>ywtb.ga.tj.gov.cn</p >
+        </div>
+
+        <div class="content">
+            <!-- 印章 -->
+            <div class="stamp">有效</div>
+
+            <!-- 信息列表 -->
+            <div class="info-item">
+                <span class="info-label">被查询人</span>
+                <span class="info-value">高永旭</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">证件名称</span>
+                <span class="info-value">居民身份证</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">证件号码</span>
+                <span class="info-value">12022219920513705X</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-item">
+                <span class="info-label">办理结果</span>
+                <span class="info-value">审批内容: 同意</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">查询区间从</span>
+                <span class="info-value">1992-05-13</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">查询区间至</span>
+                <span class="info-value">2026-01-05</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">开具单位</span>
+                <span class="info-value">武清分局汊沽港派出所</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">开具日期</span>
+                <span class="info-value">2026-01-05</span>
+            </div>
+
+            <!-- 底部信息 -->
+            <div class="footer">
+                <p>经核验，相关信息如上所示！</p >
+                <span class="scan-info">剩余扫描次数: 1</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
